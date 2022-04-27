@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imgSchool"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/txtName"
+        android:text="Ten Sinh Vien"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:textColor="#009688"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgSchool"
+        />
+    <TextView
+        android:id="@+id/txtLop"
+        android:text="Lop"
+        android:textSize="23dp"
+        android:textColor="#009688"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgSchool"
+        android:layout_below="@+id/txtName"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtGioiTinh"
+        android:text="Gioi Tinh"
+        android:textSize="23dp"
+        android:textColor="#009688"
+        android:layout_toRightOf="@+id/imgSchool"
+        android:layout_below="@+id/txtLop"/>
+
+
+</RelativeLayout>

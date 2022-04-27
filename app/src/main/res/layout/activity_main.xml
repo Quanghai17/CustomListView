@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTitle"
+        android:text="Thong tin Sinh Vien"
+        android:textSize="25dp"
+        android:textStyle="bold">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitle"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ten Sinh Vien: "
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout1"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/txtLop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lop:"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtLop"
+            android:layout_toRightOf="@+id/txtLop"
+            android:layout_weight="6"
+            android:layout_marginLeft="100dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/layout2">
+
+        <TextView
+            android:id="@+id/txtgioiTinh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gioi Tinh: "
+            android:textSize="23dp"
+            android:textStyle="bold"/>
+        <RadioGroup
+            android:id="@+id/rdoGroup"
+            android:layout_toRightOf="@+id/txtgioiTinh"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rdoNam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nam"
+                android:textStyle="bold"
+                android:checked="true"
+                android:textSize="23dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdoNu"
+                android:text="Nu"
+                android:textSize="23dp"
+                android:textStyle="bold"/>
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnThem"
+        android:text="Them"
+        android:layout_below="@+id/layout3"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSua"
+        android:text="Sua"
+        android:layout_below="@+id/layout3"
+        android:layout_toRightOf="@+id/btnThem"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnReset"
+        android:text="Nhap Lai"
+        android:layout_below="@+id/layout3"
+        android:layout_toRightOf="@+id/btnSua"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvSinhVien"
+        android:layout_below="@+id/btnThem"/>
+
+
+
+
+
+</RelativeLayout>
